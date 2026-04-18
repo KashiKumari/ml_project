@@ -32,7 +32,7 @@ function Dashboard() {
     setLoading(true); setResult(null); setError("");
     try {
       const payload = Object.fromEntries(FIELDS.map(({ id }) => [id, parseFloat(form[id])]));
-      const res = await fetch("http://127.0.0.1:5000/predict", {
+      const res = await fetch("https://ml-project-g64n.onrender.com/predict", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
