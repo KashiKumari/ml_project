@@ -1,0 +1,25 @@
+# ── General ───────────────────────────────────────────────────────────────────
+.env
+.env.*
+.DS_Store
+Thumbs.db
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ── Backend ───────────────────────────────────────────────────────────────────
+backend/venv/
+backend/*.log
+
+# ML model files — KEEP model.pkl and scaler.pkl tracked (they are small and
+# required for the Flask API to run without a retrain step on every clone).
+# Uncomment the lines below ONLY if your .pkl files exceed ~50 MB.
+# backend/*.pkl
+
+# ── Frontend ──────────────────────────────────────────────────────────────────
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
