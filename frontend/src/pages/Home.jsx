@@ -109,13 +109,15 @@ function Home() {
 
         {/* Main heading */}
         <motion.h1
-          variants={fadeUp} initial="hidden" animate="visible" custom={1}
-          className="text-6xl sm:text-7xl md:text-8xl font-extrabold leading-[1.05] tracking-tight mb-7 max-w-5xl text-gray-900"
+          initial={{ opacity: 0, y: 30, scale: 0.95 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="text-6xl sm:text-7xl md:text-8xl font-extrabold leading-[1.05] tracking-tight mb-7 max-w-5xl
+            bg-gradient-to-r from-[#16BFFD] to-[#CB3066]
+            bg-clip-text text-transparent
+            animate-text-gradient"
         >
-          AI-Powered{" "}
-          <span className="text-gray-900">
-            Defect Detection
-          </span>
+          AI-Powered Defect Detection
         </motion.h1>
 
         {/* Subheading */}

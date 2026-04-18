@@ -4,6 +4,40 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ── Animated gradient background ── */
+@keyframes gradientMove {
+  0%   { background-position: 0% 50%;   }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%;   }
+}
+
+/* Applied to the overlay div in App.jsx */
+.animated-gradient {
+  background: linear-gradient(270deg, #16BFFD, #0d1b2a, #CB3066, #0d1b2a);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease-in-out infinite;
+}
+
+/* ── Animated gradient text ── */
+@keyframes textGradientMove {
+  0%   { background-position: 0% 50%;   }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%;   }
+}
+
+.animate-text-gradient {
+  background-size: 200% 200%;
+  animation: textGradientMove 5s ease infinite;
+}
+
+/* ── Glassmorphism utility — used on Navbar, Footer, cards ── */
+.glass {
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
 @layer base {
   html {
     font-family: 'Inter', system-ui, sans-serif;
@@ -14,14 +48,19 @@
 
   body {
     min-height: 100vh;
-    color: #111827;
+    color: #f1f5f9;
+    /* SVG noise texture — pure CSS grain, no external file needed */
+    background-color: #0d1b2a;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23noise)' opacity='0.06'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 200px 200px;
   }
 
-  /* Custom scrollbar */
+  /* Scrollbar — brand palette */
   ::-webkit-scrollbar        { width: 6px; }
-  ::-webkit-scrollbar-track  { background: #0a192f; }
-  ::-webkit-scrollbar-thumb  { background: #1e3a5f; border-radius: 3px; }
-  ::-webkit-scrollbar-thumb:hover { background: #2563eb; }
+  ::-webkit-scrollbar-track  { background: #0d1b2a; }
+  ::-webkit-scrollbar-thumb  { background: #16BFFD; border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: #CB3066; }
 
   /* Number input — hide arrows */
   input[type=number]::-webkit-inner-spin-button,

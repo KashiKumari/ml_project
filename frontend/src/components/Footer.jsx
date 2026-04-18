@@ -55,10 +55,10 @@ function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative mt-auto border-t border-gray-200 bg-gray-50 overflow-hidden">
+    <footer className="glass relative mt-auto overflow-hidden border-t border-white/10">
 
-      {/* Subtle top accent line */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-px bg-gradient-to-r from-transparent via-blue-300/60 to-transparent" />
+      {/* Brand accent line using brand gradient */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-px bg-gradient-to-r from-transparent via-[#16BFFD]/60 to-[#CB3066]/60" />
 
       <div className="relative max-w-7xl mx-auto px-6 pt-16 pb-8">
 
@@ -68,15 +68,15 @@ function Footer() {
           {/* Brand column */}
           <div className="sm:col-span-2 lg:col-span-1">
             <Link to="/" className="inline-flex items-center gap-2.5 mb-5 group">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center text-white font-black text-base shadow-md shadow-blue-500/20 group-hover:shadow-blue-500/40 transition-shadow">
+              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#16BFFD] to-[#CB3066] flex items-center justify-center text-white font-black text-base shadow-md shadow-[#16BFFD]/20 group-hover:shadow-[#16BFFD]/40 transition-shadow">
                 D
               </div>
-              <span className="text-xl font-extrabold tracking-tight text-gray-900">
-                Defect<span className="text-blue-600">Detector</span>
+              <span className="text-xl font-extrabold tracking-tight text-white">
+                Defect<span className="bg-clip-text text-transparent bg-gradient-to-r from-[#16BFFD] to-[#CB3066]">Detector</span>
               </span>
             </Link>
 
-            <p className="text-black text-sm leading-relaxed mb-6 max-w-xs">
+            <p className="text-white/60 text-sm leading-relaxed mb-6 max-w-xs">
               An ML-powered platform that predicts automotive manufacturing
               defects in real time — helping teams reduce waste and improve
               product quality.
@@ -91,7 +91,7 @@ function Footer() {
                   target="_blank"
                   rel="noreferrer"
                   aria-label={label}
-                  className="w-9 h-9 flex items-center justify-center rounded-lg border border-gray-200 bg-white text-black hover:text-blue-600 hover:border-blue-300 hover:bg-blue-50 transition-all duration-200"
+                  className="w-9 h-9 flex items-center justify-center rounded-lg border border-white/15 bg-white/5 text-white/60 hover:text-white hover:border-[#16BFFD]/50 hover:bg-white/10 transition-all duration-200"
                 >
                   {icon}
                 </a>
@@ -101,7 +101,7 @@ function Footer() {
 
           {/* Navigation */}
           <div>
-            <h3 className="text-sm font-bold text-black uppercase tracking-widest mb-5">
+            <h3 className="text-sm font-bold text-white/50 uppercase tracking-widest mb-5">
               Navigation
             </h3>
             <ul className="flex flex-col gap-3">
@@ -109,9 +109,9 @@ function Footer() {
                 <li key={label}>
                   <Link
                     to={to}
-                    className="text-black hover:text-blue-600 text-sm transition-colors duration-200 flex items-center gap-1.5 group"
+                    className="text-white/70 hover:text-white text-sm transition-colors duration-200 flex items-center gap-1.5 group"
                   >
-                    <span className="w-0 group-hover:w-3 h-px bg-blue-500 transition-all duration-200 rounded-full" />
+                    <span className="w-0 group-hover:w-3 h-px bg-[#16BFFD] transition-all duration-200 rounded-full" />
                     {label}
                   </Link>
                 </li>
@@ -121,7 +121,7 @@ function Footer() {
 
           {/* Product */}
           <div>
-            <h3 className="text-sm font-bold text-black uppercase tracking-widest mb-5">
+            <h3 className="text-sm font-bold text-white/50 uppercase tracking-widest mb-5">
               Product
             </h3>
             <ul className="flex flex-col gap-3">
@@ -129,9 +129,9 @@ function Footer() {
                 <li key={label}>
                   <Link
                     to={to}
-                    className="text-black hover:text-blue-600 text-sm transition-colors duration-200 flex items-center gap-1.5 group"
+                    className="text-white/70 hover:text-white text-sm transition-colors duration-200 flex items-center gap-1.5 group"
                   >
-                    <span className="w-0 group-hover:w-3 h-px bg-blue-500 transition-all duration-200 rounded-full" />
+                    <span className="w-0 group-hover:w-3 h-px bg-[#16BFFD] transition-all duration-200 rounded-full" />
                     {label}
                   </Link>
                 </li>
@@ -141,7 +141,7 @@ function Footer() {
 
           {/* Resources */}
           <div>
-            <h3 className="text-sm font-bold text-black uppercase tracking-widest mb-5">
+            <h3 className="text-sm font-bold text-white/50 uppercase tracking-widest mb-5">
               Resources
             </h3>
             <ul className="flex flex-col gap-3">
@@ -149,9 +149,9 @@ function Footer() {
                 <li key={label}>
                   <Link
                     to={to}
-                    className="text-black hover:text-blue-600 text-sm transition-colors duration-200 flex items-center gap-1.5 group"
+                    className="text-white/70 hover:text-white text-sm transition-colors duration-200 flex items-center gap-1.5 group"
                   >
-                    <span className="w-0 group-hover:w-3 h-px bg-blue-500 transition-all duration-200 rounded-full" />
+                    <span className="w-0 group-hover:w-3 h-px bg-[#16BFFD] transition-all duration-200 rounded-full" />
                     {label}
                   </Link>
                 </li>
@@ -161,20 +161,20 @@ function Footer() {
         </div>
 
         {/* ── Divider ── */}
-        <div className="h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent mb-8" />
+        <div className="h-px bg-gradient-to-r from-transparent via-white/15 to-transparent mb-8" />
 
         {/* ── Bottom bar ── */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-black text-sm">
+          <p className="text-white/50 text-sm">
             © {year}{" "}
-            <span className="text-black font-medium">DefectDetector</span>
+            <span className="text-white/70 font-medium">DefectDetector</span>
             {" "}· Automotive Defect Detection System
           </p>
 
-          <div className="flex items-center gap-2 text-black text-xs">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+          <div className="flex items-center gap-2 text-white/50 text-xs">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
             <span>System operational</span>
-            <span className="mx-2 text-gray-200">|</span>
+            <span className="mx-2 text-white/20">|</span>
             <span>Built with React · Flask · Scikit-learn</span>
           </div>
         </div>
